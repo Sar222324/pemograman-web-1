@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-banner">
+        <h1>-= FORMULIR PENDAFTARAN =-</h1>
+        <p class="subtitle">Data Mahasiswa</p>
+    </header>
+
+    <div class="main-wrapper">
+        
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="buku.html">Daftar Buku</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="form.html" class="active">Formulir</a></li>
+                <li><a href="usia.html">Usia</a></li>
+                <li><a href="tanggal.html">Tanggal</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <h2>Formulir Data Mahasiswa</h2>
+            <p>Silakan isi data diri Anda dengan lengkap dan benar pada formulir di bawah ini:</p>
+
+            <form action="" method="POST" class="form-container">
+                
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" name="nim" maxlength="11" placeholder="Masukkan NIM">
+                </div>
+
+                <div class="form-group">
+                    <label for="nama">NAMA LENGKAP</label>
+                    <input type="text" id="nama" name="nama" maxlength="25" placeholder="Masukkan Nama Lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label>JENIS KELAMIN</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="jkel" value="Pria"> Pria</label>
+                        <label><input type="radio" name="jkel" value="Wanita"> Wanita</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="agama">AGAMA</label>
+                    <select name="agama" id="agama">
+                        <option value="">-- Pilih Agama --</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Katolik">Katolik</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Khonghucu">Khonghucu</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>STATUS</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="status" value="kawin"> Kawin</label>
+                        <label><input type="radio" name="status" value="belumkawin"> Belum Kawin</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jurusan">JURUSAN</label>
+                    <select name="jurusan" id="jurusan">
+                        <option value="">-- Pilih Jurusan --</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Manajemen Informatika">Manajemen Informatika</option>
+                        <option value="Teknik Komputer">Teknik Komputer</option>
+                        <option value="Teknik Industri">Teknik Industri</option>
+                        <option value="Teknik Elektro">Teknik Elektro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ket">KETERANGAN</label>
+                    <textarea name="ket" id="ket" rows="4" placeholder="Masukkan keterangan tambahan..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Kirim Data</button>
+                    <button type="reset" class="btn-reset">Batal / Ulang</button>
+                </div>
+
+            </form>
+        </main>
+
+    </div>
+
+    <footer>
+        <p class="identitas-mhs">
+            SITI AINURRAHMAH A | 241011701252 | 05SIFX001
+        </p>
+        <small>Pemrograman Web 1 - Universitas Pamulang</small>
+    </footer>
+
+</body>
+</html>

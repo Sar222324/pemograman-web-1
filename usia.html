@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usia js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-banner">
+        <h1>-= CEK KATEGORI USIA =-</h1>
+        <p class="subtitle">Usia JS</p>
+    </header>
+
+    <div class="main-wrapper">
+    
+        <aside class="sidebar">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="buku.html">Daftar Buku</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="form.html">Formulir</a></li>
+                <li><a href="usia.html" class="active">Usia</a></li>
+                <li><a href="tanggal.html">Tanggal</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <h2>Kategori Usia Anda</h2>
+
+            <div class="age-card">
+                <script>
+                     var inputUsia = prompt("Masukkan Usia anda", "");
+
+                    if (inputUsia !== null) {
+                        var usia = Number(inputUsia);
+
+                        while (isNaN(usia) || usia <= 0 || inputUsia.trim() === "") {
+                        alert("Usia tidak valid! Masukkan angka lebih dari 0.");
+                        inputUsia = prompt("Masukkan Usia anda kembali:", "");
+
+                        if (inputUsia === null) {
+                        break;
+                        }
+                         usia = Number(inputUsia);
+                        }
+
+                    if (inputUsia !== null) {
+                        var keterangan = "";
+
+                        if (usia > 65) {
+                            keterangan = "Manula";
+                        } else if (usia > 50) {
+                            keterangan = "Orang Tua";
+                        } else if (usia > 20) {
+                            keterangan = "Dewasa";
+                        } else if (usia > 12) {
+                            keterangan = "Remaja";
+                        } else if (usia > 5) {
+                            keterangan = "Anak-Anak";
+                        } else {
+                            keterangan = "Balita";
+                        }
+
+                        document.write("<h3 class='age-result'>Usia Anda: " + usia + " tahun</h3>");
+                        document.write("<p class='age-category'>Kategori: <span>" + keterangan + "</span></p>");
+                        window.alert("Usia Anda " + usia + " tahun, tergolong: " + keterangan);
+                    } else {
+                        document.write("<p>Proses dibatalkan oleh pengguna.</p>");
+                    }
+                    } else {
+                        document.write("<p>Proses dibatalkan oleh pengguna.</p>");
+                    }
+                </script>
+
+                <button class="btn-reload" onclick="location.reload()">Cek Usia Lagi</button>
+            </div>
+        </main>
+
+    </div>
+
+    <footer>
+        <p class="identitas-mhs">
+            SITI AINURRAHMAH A | 241011701252 | 05SIFX001
+        </p>
+        <small>Pemrograman Web 1 - Universitas Pamulang</small>
+    </footer>
+
+</body>
+</html>
